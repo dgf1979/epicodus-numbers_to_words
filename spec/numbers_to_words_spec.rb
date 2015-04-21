@@ -37,8 +37,4 @@ describe('numbers to words') do
    expect("10000".numbers_to_words()).to(eq("ten thousand "))
  end
 
- it('converts 0000 to its word equivilent') do
-   expect("0000".numbers_to_words()).to(eq("zero"))
- end
-
 end
