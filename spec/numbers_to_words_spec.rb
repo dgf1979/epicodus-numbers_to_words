@@ -23,4 +23,8 @@ describe('numbers to words') do
   it('converts a two digit number in the TEENS to its word equivilent') do
     expect("15".numbers_to_words()).to(eq("fifteen"))
   end
+
+  it('converts 0 to its word equivilent') do
+    expect("0".numbers_to_words()).to(eq("zero"))
+  end
 end

@@ -1,12 +1,10 @@
 class String
   def numbers_to_words
 
-
-
-
     word_result = ""
 
     single_digit = {
+      "0" => "zero",
       "1" => "one",
       "2"=> "two",
       "3" => "three",
@@ -48,7 +46,7 @@ class String
 
         if self[0] == "1"
           word_result = teen_digit.fetch(self)
-          
+
         else
           two_items = self.split("")
           word_result = double_digit.fetch(two_items[0]) + "-" +              single_digit.fetch(two_items[1])
@@ -76,7 +74,5 @@ class String
     end
 
   end
-
-
 
 end
