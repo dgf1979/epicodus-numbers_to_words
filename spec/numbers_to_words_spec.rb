@@ -9,14 +9,18 @@ describe('numbers to words') do
   end
 
   it('converts a two-digit number to its word equivilent') do
-    expect("21".numbers_to_words()).to(eq("twenty-one"))
+    expect("31".numbers_to_words()).to(eq("thirty-one"))
   end
 
   it('converts a three-digit number to its word equivilent') do
-    expect("121".numbers_to_words()).to(eq("one-hundred-twenty-one"))
+    expect("145".numbers_to_words()).to(eq("one-hundred-fourty-five"))
   end
 
   it('adds commas in the corredt places into a number') do
     expect("1222".format_number()).to(eq("one thousand two-hundred-twenty-two"))
+  end
+
+  it('converts a two digit number in the TEENS to its word equivilent') do
+    expect("15".numbers_to_words()).to(eq("fifteen"))
   end
 end
