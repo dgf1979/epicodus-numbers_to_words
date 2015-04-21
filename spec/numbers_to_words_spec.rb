@@ -12,5 +12,8 @@ describe('numbers to words') do
     expect("21".numbers_to_words()).to(eq("twenty-one"))
   end
 
+  it('converts a three-digit number to its word equivilent') do
+    expect("121".numbers_to_words()).to(eq("one-hundred- twenty-one"))
+  end
 
 end
