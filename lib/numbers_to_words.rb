@@ -35,7 +35,7 @@ class String
 #    formatted_number = self.split(",")
 
     if formatted_number[-2]
-      formatted_number[-2].numbers_to_words + "thousand" +     formatted_number[-1].numbers_to_words
+      formatted_number[-2].numbers_to_words + " thousand " +     formatted_number[-1].numbers_to_words
 
     else
       formatted_number[-1]

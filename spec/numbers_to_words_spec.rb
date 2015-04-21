@@ -17,6 +17,6 @@ describe('numbers to words') do
   end
 
   it('adds commas in the corredt places into a number') do
-    expect("1222".format_number()).to(eq("1,222"))
+    expect("1222".format_number()).to(eq("one thousand two-hundred-twenty-two"))
   end
 end
