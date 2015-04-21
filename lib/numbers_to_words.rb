@@ -41,6 +41,7 @@ format_number
     }
 
     double_digit = {
+      "0" => "",
       "2" => "twenty",
       "3" => "thirty",
       "4" => "fourty",
@@ -75,7 +76,7 @@ format_number
           two_items = self.split("")
           word_result = double_digit.fetch(two_items[0]) + "-" +              single_digit.fetch(two_items[1])
         end
-      elsif self.length == 3
+      elsif self.length == 3 && (self != "000")
         three_items = self.split("")
         word_result = single_digit.fetch(three_items[0]) + "-hundred-" + double_digit.fetch(three_items[1]) + "-" +              single_digit.fetch(three_items[2])
       end

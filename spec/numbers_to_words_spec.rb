@@ -31,5 +31,10 @@ describe('numbers to words') do
 
  it('converts a 15 digit number in the TEENS to its word equivilent') do
    expect("999999999999".numbers_to_words()).to(eq("nine-hundred-ninety-nine billion nine-hundred-ninety-nine million nine-hundred-ninety-nine thousand nine-hundred-ninety-nine"))
-end
+ end
+
+ it('converts 10000 to its word equivilent') do
+   expect("10000".numbers_to_words()).to(eq("ten thousand "))
+ end
+
 end
