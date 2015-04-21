@@ -17,7 +17,7 @@ describe('numbers to words') do
   end
 
   it('adds commas in the corredt places into a number') do
-    expect("1222".format_number()).to(eq("one thousand two-hundred-twenty-two"))
+    expect("1222".numbers_to_words()).to(eq("one thousand two-hundred-twenty-two"))
   end
 
   it('converts a two digit number in the TEENS to its word equivilent') do
@@ -27,4 +27,9 @@ describe('numbers to words') do
   it('converts 0 to its word equivilent') do
     expect("0".numbers_to_words()).to(eq("zero"))
   end
+
+
+ it('converts a 15 digit number in the TEENS to its word equivilent') do
+   expect("999999999999".numbers_to_words()).to(eq("nine-hundred-ninety-nine billion nine-hundred-ninety-nine million nine-hundred-ninety-nine thousand nine-hundred-ninety-nine"))
+end
 end

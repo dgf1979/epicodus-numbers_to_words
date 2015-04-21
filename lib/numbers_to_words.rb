@@ -1,5 +1,29 @@
 class String
+
   def numbers_to_words
+    formatted_number = self.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse.split(",")
+
+    if formatted_number[-5]
+      formatted_number[-5].format_number + " trillion " + formatted_number[-4].format_number + " billion " + formatted_number[-3].format_number + " million " +  formatted_number[-2].format_number + " thousand " +     formatted_number[-1].format_number
+format_number
+    elsif formatted_number[-4]
+        formatted_number[-4].format_number + " billion " + formatted_number[-3].format_number + " million " +  formatted_number[-2].format_number + " thousand " +     formatted_number[-1].format_number
+
+    elsif formatted_number[-3]
+      formatted_number[-3].format_number + " million " +  formatted_number[-2].format_number + " thousand " +     formatted_number[-1].format_number
+
+    elsif formatted_number[-2]
+      formatted_number[-2].format_number + " thousand " +     formatted_number[-1].format_number
+
+    else
+      formatted_number[-1]
+      formatted_number[-1].format_number
+    end
+
+  end
+
+
+  def format_number
 
     word_result = ""
 
@@ -60,19 +84,5 @@ class String
 
   end
 
-  def format_number
-    formatted_number = self.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse.split(",")
-
-#    formatted_number = self.split(",")
-
-    if formatted_number[-2]
-      formatted_number[-2].numbers_to_words + " thousand " +     formatted_number[-1].numbers_to_words
-
-    else
-      formatted_number[-1]
-      formatted_number[-1].numbers_to_words
-    end
-
-  end
 
 end
