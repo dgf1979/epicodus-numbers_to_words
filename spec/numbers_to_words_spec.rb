@@ -8,6 +8,9 @@ describe('numbers to words') do
     expect("1".numbers_to_words()).to(eq("one"))
   end
 
+  it('converts a two-digit number to its word equivilent') do
+    expect("23".numbers_to_words()).to(eq("twenty three"))
+  end
 
 
 end
